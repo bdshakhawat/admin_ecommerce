@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { UserButton } from "@clerk/nextjs";
 
-export default function Home() {
-    return (
-      <div className="p-7">
-        <Button>Click me</Button>
-      </div>
-       
-      
-    );
-  }
+
+const SetupPage = () => {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <UserButton afterSignOutUrl="/" />
+    </div>
+  )
+}
+export default SetupPage;
